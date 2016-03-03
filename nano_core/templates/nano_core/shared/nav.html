@@ -1,0 +1,80 @@
+{% load nano_nav %}
+{% load i18n %}
+<nav id="main-nav" class="navbar navbar-default navbar-static-top">
+<div class="container">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="{% navactive request 'home' %}">
+                <a href="{% url 'home' %}">{% trans "home"|capfirst %}</a>
+            </li>
+            <li class="{% navactive request 'news' %}">
+                <a href="{% url 'news' %}">{% trans "news"|capfirst %}</a>
+            </li>
+            <li class="{% navactive request 'members' %}">
+                <a href="{% url 'members' %}">{% trans "members" context "plural" as member %} {{member|capfirst}}</a>
+            </li>
+            <li class="{% navactive request 'publications' %}">
+                <a href="{% url 'publications' %}">{% trans "publications"|capfirst context "plural" %}</a>
+            </li>
+            <li class="{% navactive request 'contact' %}">
+                <a href="{% url 'contact' %}">{% trans "contact us"|capfirst context "plural" %}</a>
+            </li>
+        </ul>
+
+		<div class="col-sm-3 col-md-3 pull-right">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+		</div>
+
+
+        {# {% if not user.is_authenticated and not "/login" in request.get_full_path %} #}
+        {# <form class="navbar-form navbar-right" method="POST" action="{% url 'login' %}?next={{request.path}}"> #}
+        {#     {% csrf_token %} #}
+        {#     <div class='form-group'> #}
+        {#         <input type='text' class='form-control' name='username' placeholder="username" /> #}
+        {#     </div> #}
+        {#     <div class='form-group'> #}
+        {#         <input type='password' class='form-control' name='password' placeholder="password" /> #}
+        {#     </div> #}
+        {#     <button type="submit" class="btn navbar-btn btn-primary">login</button> #}
+        {# </form> #}
+        {# {% endif %} #}
+
+        {# {% if user.is_authenticated %} #}
+        {# <ul class="nav navbar-right navbar-nav"> #}
+        {#     <li> #}
+        {#         <p class='navbar-text'> #}
+        {#         Welcome, {{ user.username }} ! #}
+        {#         </p> #}
+        {#     </li> #}
+        {#     <li> #}
+        {#         <p class='navbar-text'> #}
+        {#             <a href="{% url 'logout'%}">Log Out</a> #}
+        {#         </p> #}
+        {#     </li> #}
+        {#     <li> #}
+        {#         <p class='navbar-text'> #}
+        {#             <a href="{% url 'password_change'%}">Change Password</a> #}
+        {#         </p> #}
+        {#     </li> #}
+        {# </ul> #}
+        {# {% endif %} #}
+    </div>
+</div>
+</nav>

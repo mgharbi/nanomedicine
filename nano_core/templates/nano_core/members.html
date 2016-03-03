@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+members
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            Members
+        </h3>
+    </div>
+</div>
+{% for u in users %}
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+            <h6>
+                {{u.last_name}}
+                {{u.first_name}}
+                {{u.email}}
+                {{u.user_profile.position}}
+                {{u.user_profile.fax}}
+                {{u.user_profile.address}}
+                {{u.user_profile.bio}}
+                {{u.user_profile.picture}}
+            </h6>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

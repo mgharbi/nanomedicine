@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block head_title %}home{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            {% trans "Welcome !" %}
+
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="text-justify col-md-12">
+        <p>
+            {% blocktrans %}Welcome to the official Nanomedicine Laboratory website. We hope that you will find here all the information you need about us and our research.{% endblocktrans %}
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            The laboratory
+        </h3>
+    </div>
+</div>
+<div class="row">
+    <div class="text-justify col-md-12">
+
+        <p>{% blocktrans %} Recent scientific breakthroughs showed that nanotechnologies open up extremely promising prospects for applications, specifically for medical diagnosis and treatments. The use of nanomaterials is already well developed in fields such as cosmetic, or in medical devices like bandages, implants or prosthetics as well as in in vitro diagnosis of infectious or immunological diseases.{% endblocktrans %}</p>
+        <p>
+            The still incipient use of nanostructures for cancer diagnosis and
+            therapy underlined the potentiality of these miniaturizing
+            techniques on the improvement of contrast and detail of MRI images
+            as well as on the improvement of selectivity and efficiency of
+            treatments at cell scale.
+        </p>
+
+        <p>
+            However, most research teams in the field of nanostructure have a
+            fragmented vision because they develop an expertise, either in the
+            field of nanomaterials from a physico-chemical standpoint only, or
+            in the field of biochemistry/biogenetics, or in clinical medicine.
+            Therefore, there exist very few teams, to our knowledge, that
+            benefit simultaneously from all three fields of expertise. Coping
+            with this lack of continuity in the scientific process appeared to
+            us as an interesting challenge. Our team gathers together people
+            from an optics or molecular physics background, electro-chemists,
+            organic chemists, pharmacists, and physicians in order to get
+            involved in every step of the process.
+        </p>
+
+        <p>
+            In this ambitious project, research will be fundamental in order to
+            better understand physico-chemical phenomena at cell scale. But it
+            shall also be applied, in order to develop bio-chromatographic
+            methods, nanostructures functionalization and medical imaging
+            methods. The purpose of our research is to better the methods of
+            selective radiotherapy in the treatment of tumorous tissues or the
+            delivery of inhibitors for certain diseases.
+        </p>
+    </div>
+</div>
+
+{% endblock %}

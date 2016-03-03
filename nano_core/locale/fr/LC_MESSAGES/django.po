@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-22 14:00-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: models/event.py:15
+msgid "event"
+msgstr "événement"
+
+#: models/event.py:16
+msgid "events"
+msgstr "événements"
+
+#: models/user_profile.py:33
+msgid "user profile"
+msgstr "profil utilisateur"
+
+#: models/user_profile.py:34
+msgid "user profiles"
+msgstr "profils utilisateur"
+
+#: templates/nano_core/home.html:11
+msgid "Welcome !"
+msgstr "Bienvenue !"
+
+#: templates/nano_core/home.html:19
+msgid ""
+"Welcome to the official Nanomedicine Laboratory website. We hope that you "
+"will find here all the information you need about us and our research."
+msgstr ""
+
+#: templates/nano_core/home.html:33
+msgid ""
+" Recent scientific breakthroughs showed that nanotechnologies open up "
+"extremely promising prospects for applications, specifically for medical "
+"diagnosis and treatments. The use of nanomaterials is already well developed "
+"in fields such as cosmetic, or in medical devices like bandages, implants or "
+"prosthetics as well as in in vitro diagnosis of infectious or immunological "
+"diseases."
+msgstr ""
+
+#: templates/nano_core/shared/nav.html:18
+msgid "home"
+msgstr "accueil"
+
+#: templates/nano_core/shared/nav.html:21
+msgid "news"
+msgstr "news"
+
+#: templates/nano_core/shared/nav.html:24
+#, fuzzy
+#| msgid "member"
+msgid "member"
+msgstr "membre"
+
+#: templates/nano_core/shared/nav.html:27
+msgid "publication"
+msgstr "publication"
