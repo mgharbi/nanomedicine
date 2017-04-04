@@ -5,3 +5,5 @@ from home import (
 from news import news
 from members import members
 from publications import publications
+from contact import contact
+from search import search

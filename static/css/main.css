@@ -19,3 +19,8 @@
      width:100%;
 }
 /* body { padding-top: 170px; } */
+
+#map {
+    /* width: 500px; */
+    height: 400px;
+}

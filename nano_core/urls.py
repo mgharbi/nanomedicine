@@ -12,6 +12,8 @@ urlpatterns += [
     url(r'^$', views.home, name = "home"),
     url(r'^news$', views.news, name = "news"),
     url(r'^members/$', views.members, name = "members"),
+    url(r'^members/(?P<member_id>\w+)/$', views.members, name = "members_show"),
     url(r'^publications/$', views.publications, name = "publications"),
-    url(r'^contact/$', views.publications, name = "contact"),
+    url(r'^contact/$', views.contact, name = "contact"),
+    url(r'^search/$', views.search, name = "search"),
 ]

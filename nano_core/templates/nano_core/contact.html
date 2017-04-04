@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block head_js %}
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="{% static "js/gmap.js" %}"></script>
+<script src="{% static "js/map.js" %}"></script>
+{% endblock %}
+
+{% block head_title %}
+contact us
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            Contact us
+        </h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1" id="map">
+        Here goes the map
+    </div>
+</div>
+
+{% endblock %}
+
+{% block bottom_js %}
+$(document).ready(function(){
+  initMap();
+});
+{% endblock %}

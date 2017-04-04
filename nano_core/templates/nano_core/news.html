@@ -13,5 +13,15 @@ news
         </h3>
     </div>
 </div>
+<ul class="list-unstyled">
+    {% for n in news %}
+    <div class="col-md-12">
+    <li>
+        <h4> {{n.title}} <small> {{n.date | date:"M j, Y" }} </small></h4>
+        <p> {{n.content}} </p>
+    </li>
+    </div>
+    {% endfor %}
+</ul>
 
 {% endblock %}

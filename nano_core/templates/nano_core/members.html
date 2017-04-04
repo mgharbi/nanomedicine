@@ -15,21 +15,42 @@ members
 </div>
 {% for u in users %}
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-2">
+            <img class="img-responsive" src={{u.user_profile.picture.thumbnail.url}}>
         </div>
         <div class="col-md-2">
-            <h6>
-                {{u.last_name}}
-                {{u.first_name}}
-                {{u.email}}
-                {{u.user_profile.position}}
-                {{u.user_profile.fax}}
-                {{u.user_profile.address}}
-                {{u.user_profile.bio}}
-                {{u.user_profile.picture}}
-            </h6>
+            <address>
+                <h4>
+                    {{u.last_name | upper}}
+                    {{u.first_name}}
+                    <small>
+                        {{u.user_profile.position}}
+                    </small>
+                </h4>
+                <p>
+                <a href:"mailto:{{u.email}}"> {{u.email}}</a></br>
+                {{u.user_profile.fax}}</br>
+                {{u.user_profile.address}}</br>
+                {{u.user_profile.bio}}</br>
+                </p>
+            </address>
         </div>
     </div>
 {% endfor %}
+<div class="pagination">
+    <span class="step-links">
+        {% if users.has_previous %}
+            <a href="?page={{ users.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ users.number }} of {{ users.paginator.num_pages }}.
+        </span>
+
+        {% if users.has_next %}
+            <a href="?page={{ users.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
 
 {% endblock %}

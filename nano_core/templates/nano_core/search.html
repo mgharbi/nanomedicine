@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+search
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            Search results
+        </h3>
+        <p>
+            For query: {{search_query}}
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Members</h4>
+        <ul class="list-unstyled">
+        {% for u in user_results %}
+            <li>
+                <a href={% url 'members_show' u.id %}> {{u}}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

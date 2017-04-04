@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_cleanup',
     'django_extensions',
+    'stdimage',
     'crispy_forms',
     'filetransfers',
     'bootstrap_pagination',

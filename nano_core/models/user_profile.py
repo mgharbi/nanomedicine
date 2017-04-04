@@ -4,6 +4,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
+from stdimage import StdImageField
+
 class UserProfile(models.Model):
     user = models.OneToOneField(User, primary_key = True, related_name = "user_profile")
 
@@ -24,7 +26,7 @@ class UserProfile(models.Model):
     fax      = models.CharField(max_length = 20, blank = True)
     address  = models.CharField(max_length = 50, blank = True)
     bio      = models.CharField(max_length = 1000, blank = True)
-    picture  = models.FileField(upload_to = 'profile_pictures', blank = True)
+    picture  = StdImageField(upload_to = 'profile_pictures', blank = True, variations = {'thumbnail': (500,500)})
 
     def __unicode__(self):
         return "{} | {}".format(self.user.username,self._meta.verbose_name)
